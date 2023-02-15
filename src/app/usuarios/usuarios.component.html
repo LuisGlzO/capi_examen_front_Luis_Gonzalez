@@ -1,17 +1,24 @@
 <div>
-    <table cclass="table table-striped">
-        <tr>
-            <!-- <th *ngFor="let columna of columnas">
-                <td >{{columna.titulo}}</td>}
-            </th> -->
-            <td >Nombre de usuario</td>
-            <td >Fecha de nacimiento</td>
-            <td >Dirección</td>
-        </tr>
-        <tr *ngFor="let user of usuarios">
-            <td > {{user.name}} </td>
-            <td > {{user.fecha_nacimiento}} </td>
-            <td > {{user.casa.domicilio + ' ' + user.casa.numero_exterior + ' ' + user.casa.ciudad + ' ' + user.casa.colonia + ' ' + user.casa.cp }} </td>
-        </tr>
+    <table cclass="table">
+        <thead class="thead-dark">
+            <tr>
+                <!-- <th *ngFor="let columna of columnas">
+                    <td >{{columna.titulo}}</td>}
+                </th> -->
+                <td >Nombre de usuario</td>
+                <td >Fecha de nacimiento</td>
+                <td >Edad</td>
+                <td >Dirección</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of usuarios">
+                <td > {{user.name}} </td>
+                <td > {{user.fecha_nacimiento}} </td>
+                <td > {{user.edad}} </td>
+                <td > {{user.casa.domicilio + ' ' + user.casa.numero_exterior + ' ' + user.casa.ciudad + ' ' + user.casa.colonia + ' ' + user.casa.cp }} </td>
+            </tr>
+        </tbody>
+        
     </table>
 </div>
